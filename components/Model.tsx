@@ -20,10 +20,10 @@ export default function Model() {
   }, [])
   useFrame(
     () =>
+    //@ts-ignore
+    (actions["Experiment"].time =
       //@ts-ignore
-      (actions["Experiment"].time =
-        //@ts-ignore
-        (actions["Experiment"].getClip().duration * scroll.offset) / 4)
+      (actions["Experiment"].getClip().duration * scroll.offset) / 4)
   )
   return (
     <group ref={group}>
