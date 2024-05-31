@@ -8,7 +8,7 @@ export default function Home() {
     <main className="h-full">
       <div className="relative w-full h-full">
         <Scene />
-        <div className="absolute flex justify-center items-center transform -translate-x-1/2 -translate-y-1/2 top-2/3 left-1/2 border bg-slate-100">
+        <div className="absolute flex justify-center items-center transform -translate-x-1/2 -translate-y-1/2 top-2/3 left-1/2  ">
           {/* Button */}
           <div className="rgb-btn flex justify-center items-center rounded-lg px-0.5 py-0.5 ">
             <Link href="/gelato">
