@@ -31,15 +31,7 @@ export default function GelatoScene() {
     return (
         <>
             <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="relative h-svh">
-
-                <OrbitControls
-                    enablePan={false}
-                    enableZoom={false}
-                    enableRotate={true}
-                    maxPolarAngle={Math.PI / 2}
-                    minPolarAngle={Math.PI / 2}
-                />
-                <directionalLight position={[-5, -5, 5]} intensity={4} />
+                <directionalLight position={[5, 5, 5]} intensity={10} />
                 <Suspense fallback={<Loader />}>
                     <ScrollControls damping={0.5} pages={3}>
                         <GelatoModel uploadedTexture={fileBase64} />
