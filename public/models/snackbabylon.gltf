@@ -1,0 +1,195 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "babylon.js glTF exporter for Autodesk MAYA 2022.5 v20240312.5"
+  },
+  "scene": 0,
+  "scenes": [{ "nodes": [0] }],
+  "nodes": [
+    { "children": [1, 2], "name": "chips_bag_classic" },
+    { "mesh": 0, "name": "logo" },
+    { "mesh": 1, "name": "bag" }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "TANGENT": 2,
+            "NORMAL": 3,
+            "TEXCOORD_0": 4,
+            "TEXCOORD_1": 5
+          },
+          "indices": 0,
+          "material": 0
+        }
+      ],
+      "name": "logo"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 7,
+            "TANGENT": 8,
+            "NORMAL": 9,
+            "TEXCOORD_0": 10
+          },
+          "indices": 6,
+          "material": 1
+        }
+      ],
+      "name": "bag"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5123,
+      "count": 2514,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 455,
+      "max": [0.05494561, 0.169159681, 0.009196445],
+      "min": [-0.05145634, 0.103157774, -0.04959046],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 455,
+      "type": "VEC4",
+      "name": "accessorTangents"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5460,
+      "componentType": 5126,
+      "count": 455,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 455,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 3640,
+      "componentType": 5126,
+      "count": 455,
+      "type": "VEC2",
+      "name": "accessorUV2s"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 5028,
+      "componentType": 5123,
+      "count": 28074,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 10920,
+      "componentType": 5126,
+      "count": 4967,
+      "max": [0.07417891, 0.190117091, 0.0260593034],
+      "min": [-0.0722114742, -5.4211614e-5, -0.07869148],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 7280,
+      "componentType": 5126,
+      "count": 4967,
+      "type": "VEC4",
+      "name": "accessorTangents"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 70524,
+      "componentType": 5126,
+      "count": 4967,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 7280,
+      "componentType": 5126,
+      "count": 4967,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    }
+  ],
+  "bufferViews": [
+    { "buffer": 0, "byteLength": 61176, "name": "bufferViewScalar" },
+    {
+      "buffer": 0,
+      "byteOffset": 61176,
+      "byteLength": 130128,
+      "byteStride": 12,
+      "name": "bufferViewFloatVec3"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 191304,
+      "byteLength": 86752,
+      "byteStride": 16,
+      "name": "bufferViewFloatVec4"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 278056,
+      "byteLength": 47016,
+      "byteStride": 8,
+      "name": "bufferViewFloatVec2"
+    }
+  ],
+  "buffers": [{ "uri": "snackbabylon.bin", "byteLength": 325072 }],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": { "index": 0 },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.450053632
+      },
+      "emissiveFactor": [0.5714286, 0.5714286, 0.5714286],
+      "alphaMode": "BLEND",
+      "name": "phong_logo_mat"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": { "index": 1 },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.450053632
+      },
+      "emissiveFactor": [0.5649351, 0.5649351, 0.5649351],
+      "name": "phong_texture_mat"
+    }
+  ],
+  "textures": [
+    { "sampler": 0, "source": 0, "name": "logo_alpha_logo.png" },
+    {
+      "sampler": 0,
+      "source": 1,
+      "name": "chips_bag_classic_Diffuse_nologo_512.jpg"
+    }
+  ],
+  "images": [
+    { "uri": "logo_alpha_logo.png" },
+    { "uri": "chips_bag_classic_Diffuse_nologo_512.jpg" }
+  ],
+  "samplers": [{ "magFilter": 9729, "minFilter": 9987 }]
+}

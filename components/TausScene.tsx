@@ -1,0 +1,56 @@
+"use client"
+import { useState } from "react"
+import { Canvas } from "@react-three/fiber"
+import TausModel from "./TausModel"
+import { Suspense } from "react"
+import { useProgress, Html, OrbitControls, Environment } from "@react-three/drei"
+
+function Loader() {
+    const { progress } = useProgress()
+    return <Html center>{progress.toFixed(1)} % loaded</Html>
+}
+
+export default function GelatoScene() {
+    const [fileBase64, setFileBase64] = useState<string>("")
+
+    // The Magic all happens here.
+    function convertFile(files: FileList | null) {
+        if (files) {
+            const fileRef = files[0] || ""
+            const fileType: string = fileRef.type || ""
+            console.log("This file upload is of type:", fileType)
+            const reader = new FileReader()
+            reader.readAsBinaryString(fileRef)
+            reader.onload = (ev: any) => {
+                // convert it to base64
+                setFileBase64(`data:${fileType};base64,${btoa(ev.target.result)}`)
+            }
+        }
+    }
+
+    return (
+        <>
+            <Canvas className="relative h-svh">
+                <directionalLight position={[0, 0, 0]} intensity={0} />
+                <Environment preset="city" />
+                <OrbitControls
+                    enablePan={false}
+                    enableZoom={false}
+                    enableRotate={true}
+                    maxPolarAngle={Math.PI / 2}
+                    minPolarAngle={Math.PI / 2}
+                />
+                <Suspense fallback={<Loader />}>
+                    <TausModel uploadedTexture={fileBase64} />
+                </Suspense>
+            </Canvas>
+
+            <div className="absolute flex flex-col justify-center items-center transform -translate-x-1/2 -translate-y-1/2 top-3/4 left-1/2 ">
+                {/* Button */}
+                <div className="rgb-btn flex justify-center items-center rounded-lg px-0.5 py-0.5 ">
+                    <input type="file" onChange={(e) => convertFile(e.target.files)} placeholder="Select File" />
+                </div>
+            </div>
+        </>
+    )
+}
